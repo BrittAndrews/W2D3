@@ -27,7 +27,7 @@ function maxOfThree(no1, no2, no3){
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
-var vow = ['a','e','i','o', 'u']
+var vow = ['a','e','i','o', 'u'];
 
 function isVowel(char){
  	if ( char === vow[0] || char === vow[1] || char === vow[2] || char === vow[3] || char === vow[4]){
@@ -40,26 +40,40 @@ function isVowel(char){
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-function rovarspraket(phrase){
-    //...
-}
+var cons = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'];
+var doubled=cons.map(function rovarspraket(phrase){
+	return phrase +'o'+ phrase;
+});
+
+
+(function rovarspraket(phrase){
+
 
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
-    //...
+
+var backwards = function reverse(word){
+    return word.split("").reverse().join("");
 }
+
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
-function findLongestWord(words){
-    //...
-}
+var array = ['small', 'medium', 'longest', 'longerest', 'longereryest'];
+
+
+var findLongest = function findLongestWord(array){
+    return function(a,b) {  
+        if (a.length > b.length) return -1;
+        if (a.length < b.length) return 1;
+          return 0
+      }[0];}
+
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
@@ -76,3 +90,8 @@ function filterLongWords(words, i){
 function charFreq(string){
     //...
 }
+
+
+
+
+
